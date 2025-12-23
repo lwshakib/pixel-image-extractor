@@ -1,6 +1,6 @@
 {
   "name": "pixel-image-extractor",
-     "extension_name": "Pixel — Image Extractor",
+  "extension_name": "Pixel — Image Extractor",
   "description": "A high-performance Chrome extension for extracting, analyzing, and managing images from any webpage. Pixel provides precise filtering, intelligent sorting, and efficient bulk downloads, making image collection fast and structured.",
   "extension_description": "Pixel scans webpages to detect and segment images automatically, allowing you to review, organize, and download assets with minimal effort.",
   "type": "module",
@@ -52,7 +52,7 @@
     "react-day-picker": "^9.13.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.69.0",
-    "react-resizable-panels": "^4.0.14",
+    "react-resizable-panels": "2.1.9",
     "recharts": "2.15.4",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0",
