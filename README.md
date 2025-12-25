@@ -55,6 +55,26 @@ When you open the Pixel side panel on any page:
    - Enriches them with metadata (dimensions, mimetype, approximate size when available).
    - Lets you sort, filter, and act on the collection.
 
+```mermaid
+sequenceDiagram
+    actor User
+    participant Panel as Side Panel
+    participant BG as Background Script
+    participant Tab as Active Tab (Content Script)
+
+    User->>Panel: Open Side Panel
+    Panel->>BG: Request Image Extraction
+    BG->>Tab: Check for Content Script
+    alt Script Not Present
+        BG->>Tab: Inject Content Script
+    end
+    Tab->>Tab: Scan DOM (img, picture, svg, css)
+    Tab->>Tab: Deduplicate & Normalize URLs
+    Tab-->>BG: Return Extracted Images
+    BG-->>Panel: Send Image Data
+    Panel->>User: Display Image Grid
+```
+
 All processing happens in the **browser**, and the extension does **not** send your page content to any remote server.
 
 ---
