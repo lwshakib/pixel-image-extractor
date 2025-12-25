@@ -70,6 +70,16 @@ git pull origin main
 git checkout -b feature/short-description
 ```
 
+```mermaid
+flowchart LR
+    A[Fork Repo] --> B[Clone Locally]
+    B --> C[Create Branch]
+    C --> D[Make Changes]
+    D --> E[Test & Build]
+    E --> F[Push to Fork]
+    F --> G[Open Pull Request]
+```
+
 Use clear, descriptive branch names such as:
 
 - `feature/add-size-filtering`
